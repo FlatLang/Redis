@@ -25,7 +25,7 @@ class RedisConnection {
 
     [Target js]
     get<T>(String key) -> T {
-        let promise = new Promise<T>()
+        let promise = Promise<T>()
 
         external {
             #{jsClient}.get(#{key.chars.data}, (error, reply) => {
