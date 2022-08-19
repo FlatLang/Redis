@@ -1,4 +1,4 @@
-package "flatlang/redis"
+package flatlang/redis
 
 trait JsRedis {
     public createClient()
