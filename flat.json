@@ -1,0 +1,26 @@
+{
+  "name": "Redis",
+  "version": "0.1.0",
+  "description": "Flat Redis Client",
+  "author": "Braden Steffaniak",
+  "license": "ISC",
+  "defaultTarget": "es6",
+  "scripts": {
+    "test": "node dist/test.js"
+  },
+  "main": {
+    "source": "src",
+    "dependencies": {
+      "github:FlatLang/Standard-Library": "master",
+      "github:FlatLang/System": "master",
+      "github:FlatLang/IO": "master"
+    }
+  },
+  "test": {
+    "source": "src/**/*_Test*.flat",
+    "mainClass": "flatlang/redis/Redis_TestSuite",
+    "dependencies": {
+      "github:FlatLang/Nest": "master"
+    }
+  }
+}
