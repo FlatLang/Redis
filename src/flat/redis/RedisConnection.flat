@@ -1,6 +1,6 @@
-package flatlang/redis
+package flat/redis
 
-import flatlang/async/Promise
+import flat/async/Promise
 
 class RedisConnection {
     [Target js] external type JsClient

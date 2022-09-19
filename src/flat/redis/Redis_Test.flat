@@ -1,4 +1,4 @@
-package flatlang/redis
+package flat/redis
 
 testable class {
   test `can create`() {

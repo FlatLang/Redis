@@ -19,7 +19,7 @@
     },
     "test": {
       "source": "src/**/*_Test*.flat",
-      "mainClass": "flatlang/redis/Redis_TestSuite",
+      "mainClass": "flat/redis/Redis_TestSuite",
       "dependencies": {
         "github:FlatLang/Nest": "master"
       }
