@@ -12,9 +12,9 @@
     "main": {
       "source": "src",
       "dependencies": {
-        "github:FlatLang/Standard-Library": "master",
         "github:FlatLang/System": "master",
-        "github:FlatLang/IO": "master"
+        "github:FlatLang/IO": "master",
+        "github:FlatLang/Future": "master"
       }
     },
     "test": {

@@ -1,6 +1,6 @@
 package flat/redis
 
-import flat/async/Promise
+import flat/future
 
 class RedisConnection {
     [Target js] external type JsClient
@@ -21,22 +21,26 @@ class RedisConnection {
     }
 
     [Target not js]
-    get<T>(String key) -> T => null
+    get<T>(String key) -> Future<T> => null
 
     [Target js]
-    get<T>(String key) -> T {
-        let promise = Promise<T>()
+    get<T>(String key) -> Future<T> {
+        let future = Future.create()
+        native var Object data
+        native_array native var Char[] dataChars
 
         external {
             #{jsClient}.get(#{key.chars.data}, (error, reply) => {
                 if (error) {
-                    #{promise}.reject();
+                    #{dataChars} = error.toString() || "";
+                    #{future.error(Exception(String(dataChars)))};
                 } else {
-                    #{promise}.resolve(reply);
+                    #{data} = reply;
+                    #{future.complete(data)};
                 }
             });
         }
 
-        return null
+        return future
     }
 }
