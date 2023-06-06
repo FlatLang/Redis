@@ -1,5 +1,5 @@
 package flat/redis
 
 trait JsRedis {
-    public createClient()
+        public createClient()
 }
