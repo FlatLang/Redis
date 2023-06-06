@@ -12,16 +12,16 @@
     "main": {
       "source": "src",
       "dependencies": {
-        "github:FlatLang/System": "master",
-        "github:FlatLang/IO": "master",
-        "github:FlatLang/Future": "master"
+        "https://github.com/FlatLang/System": "master",
+        "https://github.com/FlatLang/IO": "master",
+        "https://github.com/FlatLang/Future": "master"
       }
     },
     "test": {
       "source": "src/**/*_Test*.flat",
       "mainClass": "flat/redis/Redis_TestSuite",
       "dependencies": {
-        "github:FlatLang/Test": "master"
+        "https://github.com/FlatLang/Test": "master"
       }
     }
   }
